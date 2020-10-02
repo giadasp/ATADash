@@ -1,4 +1,10 @@
 name = "ATADash"
 uuid = "236b7dbe-4167-40cb-a459-bcf8ce4b2cbd"
-authors = ["giada "]
+authors = ["GiadaSpaccapanico <giadasp@users.noreply.github.com>"]
 version = "0.1.0"
+
+[deps]
+Dash = "1b08a953-4be3-4667-9a23-3db579824955"
+DashCoreComponents = "1b08a953-4be3-4667-9a23-9da06441d987"
+DashHtmlComponents = "1b08a953-4be3-4667-9a23-24100242a84a"
+Requires = "ae029012-a4dd-5104-9daa-d747884805df"
