@@ -85,6 +85,12 @@ version = "0.5.0"
 deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
 
+[[JLD2]]
+deps = ["CodecZlib", "DataStructures", "MacroTools", "Mmap", "Pkg", "Printf", "Requires", "UUIDs"]
+git-tree-sha1 = "d71a4c4adfc1ec8e2b988b19d5800668b038aa89"
+uuid = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+version = "0.2.2"
+
 [[JSON]]
 deps = ["Dates", "Mmap", "Parsers", "Unicode"]
 git-tree-sha1 = "81690084b6198a2e1da36fcfda16eeca9f9f24e4"
@@ -121,6 +127,12 @@ deps = ["Random", "SHA"]
 git-tree-sha1 = "eeffe42284464c35a08026d23aa948421acf8923"
 uuid = "6ac74813-4b46-53a4-afec-0b5dc9d7885c"
 version = "0.2.1"
+
+[[MacroTools]]
+deps = ["Markdown", "Random"]
+git-tree-sha1 = "f7d2e3f654af75f01ec49be82c231c382214223a"
+uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
+version = "0.5.5"
 
 [[Markdown]]
 deps = ["Base64"]

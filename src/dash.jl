@@ -1063,7 +1063,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("results_lbl", "children"), Dash.output("results_card", "className")],
+        [Dash.Output("results_lbl", "children"), Dash.Output("results_card", "className")],
         Dash.Input("assemble_btn", "n_clicks"),
         [
             Dash.State("start_temp_txt", "value"),
@@ -1193,8 +1193,8 @@ function ATA_app()
     Dash.callback!(
         app,
         [
-            Dash.output("settings_lbl", "children"),
-            Dash.output("settings_card", "className"),
+            Dash.Output("settings_lbl", "children"),
+            Dash.Output("settings_card", "className"),
         ],
         [Dash.Input("settings_btn", "n_clicks")],
         [
@@ -1226,7 +1226,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("addFS_lbl", "children"), Dash.output("addFS_card", "className")],
+        [Dash.Output("addFS_lbl", "children"), Dash.Output("addFS_card", "className")],
         [Dash.Input("addFS_btn", "n_clicks")],
         Dash.State("addFS_btn", "n_clicks"),
     ) do n_clicks, n_click_state
@@ -1246,7 +1246,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("addES_lbl", "children"), Dash.output("addES_card", "className")],
+        [Dash.Output("addES_lbl", "children"), Dash.Output("addES_card", "className")],
         [Dash.Input("addES_btn", "n_clicks")],
         Dash.State("addES_btn", "n_clicks"),
     ) do n_clicks, n_click_state
@@ -1267,8 +1267,8 @@ function ATA_app()
     Dash.callback!(
         app,
         [
-            Dash.output("addConstraints_lbl", "children"),
-            Dash.output("addConstraints_card", "className"),
+            Dash.Output("addConstraints_lbl", "children"),
+            Dash.Output("addConstraints_card", "className"),
         ],
         [Dash.Input("addConstraints_btn", "n_clicks")],
         [
@@ -1297,7 +1297,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("ol_lbl", "children"), Dash.output("ol_card", "className")],
+        [Dash.Output("ol_lbl", "children"), Dash.Output("ol_card", "className")],
         [Dash.Input("addOl_btn", "n_clicks")],
         [Dash.State("ol_txt", "value"), Dash.State("ol_delim_txt", "value")],
     ) do n_clicks, ol_file, ol_delim
@@ -1320,8 +1320,8 @@ function ATA_app()
     Dash.callback!(
         app,
         [
-            Dash.output("addExpScore_lbl", "children"),
-            Dash.output("addExpScore_card", "className"),
+            Dash.Output("addExpScore_lbl", "children"),
+            Dash.Output("addExpScore_card", "className"),
         ],
         [Dash.Input("addExpScore_btn", "n_clicks")],
     ) do n_clicks
@@ -1341,7 +1341,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("group_lbl", "children"), Dash.output("group_card", "className")],
+        [Dash.Output("group_lbl", "children"), Dash.Output("group_card", "className")],
         [Dash.Input("group_btn", "n_clicks")],
     ) do n_clicks
         if n_clicks > 0
@@ -1360,7 +1360,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("addObj_lbl", "children"), Dash.output("addObj_card", "className")],
+        [Dash.Output("addObj_lbl", "children"), Dash.Output("addObj_card", "className")],
         [Dash.Input("addObj_btn", "n_clicks")],
     ) do n_clicks
         if n_clicks > 0
@@ -1379,7 +1379,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        [Dash.output("start_lbl", "children"), Dash.output("restart_card", "className")],
+        [Dash.Output("start_lbl", "children"), Dash.Output("restart_card", "className")],
         Dash.Input("start_btn", "n_clicks"),
         [Dash.State("folder_txt", "value")],
     ) do n_clicks, folder
@@ -1405,8 +1405,8 @@ function ATA_app()
     Dash.callback!(
         app,
         [
-            Dash.output("n_item_StatsBase.sample_txt", "value"),
-            Dash.output("n_test_StatsBase.sample_txt", "value"),
+            Dash.Output("n_item_StatsBase.sample_txt", "value"),
+            Dash.Output("n_test_StatsBase.sample_txt", "value"),
         ],
         Dash.Input("settings_card", "className"),
     ) do success
@@ -1422,7 +1422,7 @@ function ATA_app()
     #
     Dash.callback!(
         app,
-        Dash.output("settings_btn", "n_clicks"),
+        Dash.Output("settings_btn", "n_clicks"),
         Dash.Input("start_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == "ATA model successfully initialized"
@@ -1434,7 +1434,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("addFS_btn", "n_clicks"),
+        Dash.Output("addFS_btn", "n_clicks"),
         Dash.Input("settings_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1446,7 +1446,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("addES_btn", "n_clicks"),
+        Dash.Output("addES_btn", "n_clicks"),
         Dash.Input("addFS_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1458,7 +1458,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("addConstraints_btn", "n_clicks"),
+        Dash.Output("addConstraints_btn", "n_clicks"),
         Dash.Input("addES_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1470,7 +1470,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("addOl_btn", "n_clicks"),
+        Dash.Output("addOl_btn", "n_clicks"),
         Dash.Input("addConstraints_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1482,7 +1482,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("addExpScore_btn", "n_clicks"),
+        Dash.Output("addExpScore_btn", "n_clicks"),
         Dash.Input("ol_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1494,7 +1494,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("group_btn", "n_clicks"),
+        Dash.Output("group_btn", "n_clicks"),
         Dash.Input("addExpScore_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1506,7 +1506,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("addObj_btn", "n_clicks"),
+        Dash.Output("addObj_btn", "n_clicks"),
         Dash.Input("group_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
@@ -1518,7 +1518,7 @@ function ATA_app()
 
     Dash.callback!(
         app,
-        Dash.output("assemble_btn", "n_clicks"),
+        Dash.Output("assemble_btn", "n_clicks"),
         Dash.Input("addObj_lbl", "children"),
     ) do starter_lbl
         if starter_lbl == ""
