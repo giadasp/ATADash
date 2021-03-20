@@ -45,7 +45,7 @@ jobs:
 
       - name: Compress target directories
         run: |
-          zip -r ATA.zip src/ test/ LICENSE *.toml
+          zip -r zip src/ test/ LICENSE *.toml
 
       - name: Upload Github Release
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -55,4 +55,4 @@ jobs:
           prerelease: ${{ env.IS_SNAPSHOT }}
           title: v${{ env.VERSION }}
           files: |
-            ATA.zip
+            zip
