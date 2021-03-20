@@ -1,0 +1,7 @@
+docs/build/
+examples/OPT/
+examples/RESULTS/
+examples/PLOTS/
+*.txt
+*.pdf
+*.jld2
