@@ -1,6 +1,6 @@
 docs/build/
 examples/OPT/
-examples/RESULTS/
+examples/results/
 examples/PLOTS/
 *.txt
 *.pdf

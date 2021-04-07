@@ -86,26 +86,26 @@ function ata_app()
         else
             folder = replace(folder, "\\" => "/")
             cd(folder)
-            add_friend_sets = "add_friend_sets" in flags
-            add_enemy_sets = "add_enemy_sets" in flags
+            # add_friend_sets = "add_friend_sets" in flags
+            # add_enemy_sets = "add_enemy_sets" in flags
             add_constraints = "add_constraints" in flags
-            add_exp_score = "add_exp_score" in flags
+            # add_exp_score = "add_exp_score" in flags
             add_overlap = "add_overlap" in flags
             group_by_friends = "group_by_friends" in flags
             add_obj_fun = "add_obj_fun" in flags
             messages = ["danger", ""]
             try
-                ata_model = ATA.start_ATA(;
+                ata_model = ATA.start_ata(;
                     settings_file = settings_file,
                     bank_file = bank_file,
                     bank_delim = bank_delim,
                 )
-                if add_friend_sets
-                    ATA.add_friends!(ata_model)
-                end
-                if add_enemy_sets
-                    ATA.add_enemies!(ata_model)
-                end
+                # if add_friend_sets
+                #     ATA.add_friends!(ata_model)
+                # end
+                # if add_enemy_sets
+                #     ATA.add_enemies!(ata_model)
+                # end
                 if add_constraints
                     ATA.add_constraints!(
                         ata_model;
@@ -120,9 +120,9 @@ function ata_app()
                         overlap_delim = overlap_delim,
                     )
                 end
-                if add_exp_score
-                    ATA.add_exp_score!(ata_model)
-                end
+                # if add_exp_score
+                #     ATA.add_exp_score!(ata_model)
+                # end
                 if group_by_friends
                     ATA.group_by_friends!(ata_model)
                 end
@@ -215,7 +215,7 @@ function ata_app()
             output = ""
             try
                 cd(folder)
-                results_folder = "RESULTS"
+                results_folder = "results"
                 if isfile(starting_design)
                     starting_design = Matrix{Float64}(
                         CSV.read(starting_design, delim = ";", header = false),

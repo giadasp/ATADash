@@ -6,7 +6,7 @@ results_folder_row = html_div(
             className = "col",
             [
                 DashCoreComponents.dcc_input(
-                    value = "RESULTS",
+                    value = "results",
                     className = "form-control",
                     type = "text",
                     id = "results_folder_txt",
