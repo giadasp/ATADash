@@ -2,7 +2,7 @@ include("create_model/create_model_tab.jl")
 include("assemble/assemble_tab.jl")
 include("results_tab.jl")
 
-function ATA_app()
+function ata_app()
     js_files = [
         Dict(
             "src" => "https://code.jquery.com/jquery-3.5.1.slim.min.js",
