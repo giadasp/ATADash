@@ -1,8 +1,14 @@
 module ATADash
+using Base64
 using JLD2
+using DataFrames
 using Dash
 using DashHtmlComponents
 using DashCoreComponents
+using DashTable
+using Serialization
+using HTTP
+using CSV
 
 using Requires
 function __init__()

@@ -7,7 +7,10 @@ load_settings_row = html_div(
                 html_div(
                     className = "row m-1",
                     [
-                        html_label("Working directory (absolute path):", className = "mr-1"),
+                        html_label(
+                            "Working directory (absolute path):",
+                            className = "mr-1",
+                        ),
                         dcc_input(
                             id = "folder_txt",
                             value = pwd(),

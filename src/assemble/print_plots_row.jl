@@ -1,11 +1,11 @@
 # print_plots_row = html_div(
 #     className = "row m-1",
 #     [
-#         html_div(className = "col", [html_label("Print plots:")]),
+#         insert_col( children =  [html_label("Print plots:")]),
 #         html_div(
 #             className = "col",
 #             [
-#                 DashCoreComponents.dcc_dropdown(
+#                 dcc_dropdown(
 #                     value = "no",
 #                     id = "plots_out_txt",
 #                     options = [

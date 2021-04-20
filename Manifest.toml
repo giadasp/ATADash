@@ -9,6 +9,18 @@ uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 [[Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
+[[CSV]]
+deps = ["Dates", "Mmap", "Parsers", "PooledArrays", "SentinelArrays", "Tables", "Unicode"]
+git-tree-sha1 = "6d4242ef4cb1539e7ede8e01a47a32365e0a34cd"
+uuid = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+version = "0.8.4"
+
+[[CategoricalArrays]]
+deps = ["DataAPI", "Future", "JSON", "Missings", "Printf", "Statistics", "StructTypes", "Unicode"]
+git-tree-sha1 = "f713d583d10fc036252fd826feebc6c173c522a8"
+uuid = "324d7699-5711-5eae-9e2f-1d82baa6b597"
+version = "0.9.5"
+
 [[CodecZlib]]
 deps = ["TranscodingStreams", "Zlib_jll"]
 git-tree-sha1 = "ded953804d019afa9a3f98981d99b33e3db7b6da"
@@ -21,41 +33,72 @@ git-tree-sha1 = "4fecfd5485d3c5de4003e19f00c6898cccd40667"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
 version = "3.26.0"
 
+[[Crayons]]
+git-tree-sha1 = "3f71217b538d7aaee0b69ab47d9b7724ca8afa0d"
+uuid = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
+version = "4.0.4"
+
 [[Dash]]
 deps = ["CodecZlib", "DashBase", "DashCoreComponents", "DashHtmlComponents", "DashTable", "DataStructures", "HTTP", "JSON", "JSON2", "MD5", "PlotlyBase", "Sockets", "Test", "UUIDs"]
-git-tree-sha1 = "38dacaba1657192e5bc4505df452a4bf38990e02"
+git-tree-sha1 = "e8e764034b12c00d67f6583f35c85cc870d28946"
+repo-rev = "dev"
+repo-url = "https://github.com/plotly/Dash.jl.git"
 uuid = "1b08a953-4be3-4667-9a23-3db579824955"
 version = "0.1.3"
 
 [[DashBase]]
 deps = ["JSON2", "Test"]
-git-tree-sha1 = "fc7632ba6b4f1c085620870142114f428f51eff0"
+git-tree-sha1 = "f3570fc1349f10ac41d83f021217952930267371"
+repo-rev = "master"
+repo-url = "https://github.com/plotly/DashBase.jl.git"
 uuid = "03207cf0-e2b3-4b91-9ca8-690cf0fb507e"
 version = "0.1.0"
 
 [[DashCoreComponents]]
 deps = ["DashBase"]
-git-tree-sha1 = "34e6fdd283c7c5b03d5a8ab05fc9a0ca3ce9700d"
+git-tree-sha1 = "c762d7384363bd55c6f8cca57476f36d49c7d414"
+repo-rev = "master"
+repo-url = "https://github.com/plotly/dash-core-components.git"
 uuid = "1b08a953-4be3-4667-9a23-9da06441d987"
-version = "1.12.0"
+version = "1.15.0"
 
 [[DashHtmlComponents]]
 deps = ["DashBase"]
-git-tree-sha1 = "d4f6dd88a5eb25916f9d3eb0c4b49fdb14b4392c"
+git-tree-sha1 = "43e55fbc54e52c67026176e628a6b99627fd334a"
+repo-rev = "master"
+repo-url = "https://github.com/plotly/dash-html-components.git"
 uuid = "1b08a953-4be3-4667-9a23-24100242a84a"
-version = "1.1.1"
+version = "1.1.2"
 
 [[DashTable]]
 deps = ["DashBase"]
-git-tree-sha1 = "3c289159c57149f9d6f9039abfe842ea6d3ff2c4"
+git-tree-sha1 = "0ec62de7a3887a5b7271615bedecee47f0b3d454"
+repo-rev = "master"
+repo-url = "https://github.com/plotly/dash-table.git"
 uuid = "1b08a953-4be3-4667-9a23-f0e2ba4deb9a"
-version = "4.10.1"
+version = "4.11.2"
+
+[[DataAPI]]
+git-tree-sha1 = "dfb3b7e89e395be1e25c2ad6d7690dc29cc53b1d"
+uuid = "9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a"
+version = "1.6.0"
+
+[[DataFrames]]
+deps = ["CategoricalArrays", "Compat", "DataAPI", "Future", "InvertedIndices", "IteratorInterfaceExtensions", "LinearAlgebra", "Markdown", "Missings", "PooledArrays", "PrettyTables", "Printf", "REPL", "Reexport", "SortingAlgorithms", "Statistics", "TableTraits", "Tables", "Unicode"]
+git-tree-sha1 = "d50972453ef464ddcebdf489d11885468b7b83a3"
+uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+version = "0.22.7"
 
 [[DataStructures]]
 deps = ["Compat", "InteractiveUtils", "OrderedCollections"]
 git-tree-sha1 = "4437b64df1e0adccc3e5d1adbc3ac741095e4677"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 version = "0.18.9"
+
+[[DataValueInterfaces]]
+git-tree-sha1 = "bfc1187b79289637fa0ef6d4436ebdfe6905cbd6"
+uuid = "e2d170a0-9d28-54be-80f0-106bbe20a464"
+version = "1.0.0"
 
 [[Dates]]
 deps = ["Printf"]
@@ -79,6 +122,16 @@ version = "0.8.4"
 deps = ["ArgTools", "LibCURL", "NetworkOptions"]
 uuid = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 
+[[Formatting]]
+deps = ["Printf"]
+git-tree-sha1 = "8339d61043228fdd3eb658d86c926cb282ae72a8"
+uuid = "59287772-0a20-5a39-b81b-1366585eb4c0"
+version = "0.4.2"
+
+[[Future]]
+deps = ["Random"]
+uuid = "9fa8497b-333b-5362-9e8d-4d0656e87820"
+
 [[HTTP]]
 deps = ["Base64", "Dates", "IniFile", "MbedTLS", "Sockets"]
 git-tree-sha1 = "c7ec02c4c6a039a98a15f955462cd7aea5df4508"
@@ -94,6 +147,17 @@ version = "0.5.0"
 [[InteractiveUtils]]
 deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+
+[[InvertedIndices]]
+deps = ["Test"]
+git-tree-sha1 = "15732c475062348b0165684ffe28e85ea8396afc"
+uuid = "41ab1584-1d38-5bbf-9106-f11c6c58b48f"
+version = "1.0.0"
+
+[[IteratorInterfaceExtensions]]
+git-tree-sha1 = "a3f24677c21f5bbe9d2a714f95dcd58337fb2856"
+uuid = "82899510-4779-5014-852e-03e436cf321d"
+version = "1.0.0"
 
 [[JLD2]]
 deps = ["CodecZlib", "DataStructures", "MacroTools", "Mmap", "Pkg", "Printf", "Requires", "UUIDs"]
@@ -170,6 +234,12 @@ version = "1.0.3"
 deps = ["Artifacts", "Libdl"]
 uuid = "c8ffd9c3-330d-5841-b78e-0817d7145fa1"
 
+[[Missings]]
+deps = ["DataAPI"]
+git-tree-sha1 = "f8c673ccc215eb50fcadb285f522420e29e69e1c"
+uuid = "e1d29d7a-bbdc-5cf2-9ac0-f12de2c33e28"
+version = "0.4.5"
+
 [[Mmap]]
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 
@@ -200,6 +270,18 @@ git-tree-sha1 = "5eb8913f14a48db2f62ffad7a2e7f30bfd5e9396"
 uuid = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
 version = "0.4.3"
 
+[[PooledArrays]]
+deps = ["DataAPI", "Future"]
+git-tree-sha1 = "cde4ce9d6f33219465b55162811d8de8139c0414"
+uuid = "2dfb63ee-cc39-5dd5-95bd-886bf059d720"
+version = "1.2.1"
+
+[[PrettyTables]]
+deps = ["Crayons", "Formatting", "Markdown", "Reexport", "Tables"]
+git-tree-sha1 = "574a6b3ea95f04e8757c0280bb9c29f1a5e35138"
+uuid = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
+version = "0.11.1"
+
 [[Printf]]
 deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
@@ -212,6 +294,11 @@ uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
 deps = ["Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
+[[Reexport]]
+git-tree-sha1 = "57d8440b0c7d98fc4f889e478e80f268d534c9d5"
+uuid = "189a3867-3050-52da-a836-e630ba90ab69"
+version = "1.0.0"
+
 [[Requires]]
 deps = ["UUIDs"]
 git-tree-sha1 = "4036a3bd08ac7e968e27c203d45f5fff15020621"
@@ -220,6 +307,12 @@ version = "1.1.3"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+
+[[SentinelArrays]]
+deps = ["Dates", "Random"]
+git-tree-sha1 = "6ccde405cf0759eba835eb613130723cb8f10ff9"
+uuid = "91c51154-3ec4-41a3-a24f-3f23e20d615c"
+version = "1.2.16"
 
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -231,6 +324,12 @@ uuid = "1a1011a3-84de-559e-8e89-a11a2f7dc383"
 [[Sockets]]
 uuid = "6462fe0b-24de-5631-8697-dd941f90decc"
 
+[[SortingAlgorithms]]
+deps = ["DataStructures", "Random", "Test"]
+git-tree-sha1 = "03f5898c9959f8115e30bc7226ada7d0df554ddd"
+uuid = "a2af1166-a08f-5f64-846c-94a0d3cef48c"
+version = "0.3.1"
+
 [[SparseArrays]]
 deps = ["LinearAlgebra", "Random"]
 uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
@@ -239,9 +338,27 @@ uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 deps = ["LinearAlgebra", "SparseArrays"]
 uuid = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
+[[StructTypes]]
+deps = ["Dates", "UUIDs"]
+git-tree-sha1 = "5eaf731e88587bb72a6c1262c0a014cd1859a08d"
+uuid = "856f2bd8-1eba-4b0a-8007-ebc267875bd4"
+version = "1.5.2"
+
 [[TOML]]
 deps = ["Dates"]
 uuid = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+
+[[TableTraits]]
+deps = ["IteratorInterfaceExtensions"]
+git-tree-sha1 = "c06b2f539df1c6efa794486abfb6ed2022561a39"
+uuid = "3783bdb8-4a98-5b6b-af9a-565f29a5fe9c"
+version = "1.0.1"
+
+[[Tables]]
+deps = ["DataAPI", "DataValueInterfaces", "IteratorInterfaceExtensions", "LinearAlgebra", "TableTraits", "Test"]
+git-tree-sha1 = "a9ff3dfec713c6677af435d6a6d65f9744feef67"
+uuid = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
+version = "1.4.1"
 
 [[Tar]]
 deps = ["ArgTools", "SHA"]

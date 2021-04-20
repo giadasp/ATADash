@@ -1,4 +1,4 @@
-results_tab = DashCoreComponents.dcc_tab(
+results_tab = dcc_tab(
     className = "nav-link disabled",
     id = "results_tab",
     label = "Results",
@@ -6,21 +6,15 @@ results_tab = DashCoreComponents.dcc_tab(
         html_div(
             className = "container-fluid",
             [
-                html_div(
-                    className = "row-md-12 justify-content-center m-3",
+                insert_row(
+                    append_to_class_name = "-md-12 justify-content-center m-3",
                     [
-                        html_div(
-                            className = "col-md-12",
+                        insert_col(
+                            append_to_class_name = "-md-12",
                             [
-                                html_div(
-                                    id = "results_card",
-                                    className = "card",
-                                    [
-                                        html_div(
-                                            className = "card-body",
-                                            [html_pre(children = [""], id = "results_lbl")],
-                                        ),
-                                    ],
+                                insert_card(
+                                    [html_pre(children = [""], id = "results_lbl")],
+                                    card_id = "results_card",
                                 ),
                             ],
                         ),
